@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Typical from "react-typical";
 import {
   ArrowRight,
   Check,
@@ -132,13 +131,13 @@ export default function Component() {
                     "Create high-quality documents in record time with our advanced AI technology.",
                 },
                 {
-                  icon: <FileText className='h-10 w-10 mb-4 text-primary' />,
+                  icon: <FileText className='h-10 w-10 mb-4 text-[#8f31e3]' />,
                   title: "Template Selection",
                   description:
                     "Choose from a wide range of professionally designed templates for any purpose.",
                 },
                 {
-                  icon: <Users className='h-10 w-10 mb-4 text-primary' />,
+                  icon: <Users className='h-10 w-10 mb-4 text-[#8f31e3]' />,
                   title: "Collaborative Editing",
                   description:
                     "Work together in real-time with your team for seamless collaboration.",
@@ -157,7 +156,7 @@ export default function Component() {
                 },
                 {
                   icon: (
-                    <HeadphonesIcon className='h-10 w-10 mb-4 text-primary' />
+                    <HeadphonesIcon className='h-10 w-10 mb-4 text-[#8f31e3] ' />
                   ),
                   title: "Priority Support",
                   description:
@@ -166,13 +165,13 @@ export default function Component() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col items-center  text-cente border h-[40vh] p-6 rounded-2xl transition-transform transform hover:scale-105 ${
+                  className={`flex flex-col   text-cente border h-[40vh] p-6 rounded-2xl transition-transform transform hover:scale-105 ${
                     index === 1
-                      ? "md:col-span-2 bg-gray-100"
+                      ? "md:col-span-2 bg-gray-100 items-center"
                       : index === 2
                       ? "md:col-span-2 bg-gray-100"
                       : index === 5
-                      ? "md:col-span-2 bg-gray-100"
+                      ? "md:col-span-2 bg-gray-100 items-center"
                       : "bg-[#d7c2e74d]"
                   }`}
                 >
