@@ -29,13 +29,11 @@ import Script from "next/script";
 export default function Component() {
   return (
     <>
-      <Head>
-        <Script
-          defer
-          src='https://cloud.umami.is/script.js'
-          data-website-id='49293416-aee2-4e1b-8a50-2720bb16b965'
-        />
-      </Head>
+      <Script
+        defer
+        src='https://cloud.umami.is/script.js'
+        data-website-id='49293416-aee2-4e1b-8a50-2720bb16b965'
+      />
       <div className=''>
         <header className='px-4 lg:px-6 h-16 justify-center flex items-center gap-20 sticky top-0 bg-white z-10'>
           <div>
