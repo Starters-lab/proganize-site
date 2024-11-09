@@ -22,7 +22,6 @@ import Export from "../../public/export.png";
 import Collaborate from "../../public/collaborate.png";
 import Templates from "../../public/templates.png";
 import HowItWorks from "./layout/works";
-import Head from "next/head";
 import FAQ from "./layout/faq";
 import Script from "next/script";
 
@@ -30,6 +29,7 @@ export default function Component() {
   return (
     <>
       <Script
+        async
         defer
         src='https://cloud.umami.is/script.js'
         data-website-id='49293416-aee2-4e1b-8a50-2720bb16b965'
