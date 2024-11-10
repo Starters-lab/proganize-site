@@ -3,7 +3,6 @@ import { Card } from "@/components/ui/card";
 import {
   ArrowRight,
   Check,
-  Play,
   Zap,
   FileText,
   Users,
@@ -14,20 +13,30 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import LogoDark from "../../public/proganize-dark-side.svg";
 import ChatAi from "../../public/chatai.png";
 import Support from "../../public/support.png";
 import Publishing from "../../public/publishing.png";
 import Export from "../../public/export.png";
 import Collaborate from "../../public/collaborate.png";
 import Templates from "../../public/templates.png";
+import SocialScreen from "../../public/socialscreen.png";
 import HowItWorks from "./layout/works";
 import FAQ from "./layout/faq";
 import Script from "next/script";
+import VideoHome from "./layout/video";
+import Heading from "./layout/nav";
+import Head from "next/head";
 
 export default function Component() {
   return (
     <>
+      <Head>
+        <meta property='og:image' content='../../public/socialscreen.png' />
+        <meta property='og:title' content='Your Page Title' />
+        <meta property='og:description' content='Your page description here.' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:image' content='../../public/socialscreen.png' />
+      </Head>
       <Script
         async
         defer
@@ -35,51 +44,20 @@ export default function Component() {
         data-website-id='49293416-aee2-4e1b-8a50-2720bb16b965'
       />
       <div className=''>
-        <header className='px-4 lg:px-6 h-16 justify-center flex items-center gap-20 sticky top-0 bg-white z-10'>
-          <div>
-            <Link className='flex items-center justify-between' href='#'>
-              <Image src={LogoDark} alt='Proganize dark' />
-            </Link>
-          </div>
-          <nav className='ml-auto flex gap-4 sm:gap-6 transition-transform duration-300 ease-in-out'>
-            <Link
-              className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-              href='#howitworks'
-            >
-              How it Works
-            </Link>
-            <Link
-              className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-              href='#pricing'
-            >
-              Pricing
-            </Link>
-            <Link
-              className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-              href='#faq'
-            >
-              FAQ
-            </Link>
-          </nav>
-          <div>
-            <Button
-              className='bg-primary text-primary-foreground'
-              variant='default'
-            >
-              Go to dashboard
-            </Button>
-          </div>
-        </header>
+        <Heading />
         <main className='w-full'>
-          <section className='p-20 w-full bg-gray-100 rounded-tl-[30px] rounded-tr-[30px] mt-10'>
-            <div className='container px-4 md:px-6'>
+          <section className='md:p-20 px-4 w-full bg-gray-100 rounded-tl-[30px] rounded-tr-[30px] mt-10'>
+            <div className='px-4 md:px-6'>
               <div className='flex flex-col items-center space-y-4 text-center'>
                 <div className='space-y-2'>
-                  <h1 className='text-3xl font-bold md:w-2/3 mx-auto my-10 tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
-                    <span className='text-[#8f31e3]'>Document Faster</span> {""}
+                  <h1 className='text-5xl font-bold md:w-2/3 mx-auto my-10 tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none'>
+                    <span className='text-[#8f31e3] block md:inline'>
+                      Document Faster
+                    </span>{" "}
+                    {""}
                     Organize Smarter
                   </h1>
-                  <p className='mx-auto max-w-[600px] text-muted-foreground'>
+                  <p className='mx-auto md:max-w-[600px] text-muted-foreground'>
                     Proganize helps developers, designers, creators, and product
                     teams write and organize documents 10x faster, making
                     collaboration easy and efficient.
@@ -92,26 +70,8 @@ export default function Component() {
                   >
                     Start with 1,000 Free AI Words
                   </Button>
-                  <div className='relative mx-auto  aspect-video rounded-xl overflow-hidden mt-20'>
-                    <div className='absolute inset-0 bg-muted/40 flex items-center justify-center border'>
-                      <Button
-                        size='icon'
-                        variant='outline'
-                        className='w-12 h-12 rounded-full'
-                      >
-                        <Play className='h-4 w-4' />
-                        <span className='sr-only'>Play demo video</span>
-                      </Button>
-                    </div>
-                    <video
-                      src='https://framerusercontent.com/assets/mcPYFO5wHiAutpGrgcyTb2j9WlU.mp4'
-                      loop
-                      autoPlay={true}
-                      playsInline
-                      className='cursor-auto w-full h-full rounded-3xl block object-cover bg-transparent object-center border-[10px] border-[#bf8aeb4d]'
-                    ></video>
-                  </div>
                 </div>
+                <VideoHome />
               </div>
             </div>
           </section>
@@ -137,7 +97,7 @@ export default function Component() {
           <section className='w-full py-12 md:py-24 lg:py-32'>
             <div className='px-4 md:px-6'>
               <h2 className='text-3xl font-bold tracking-tighter text-center mb-12'></h2>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 p-4 mx-40'>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 p-4 md:mx-40'>
                 {[
                   {
                     icon: <Zap className='h-10 w-10 mb-4 text-primary' />,

@@ -10,19 +10,20 @@ const steps = [
     title: "Choose Templates",
     description: "Choose from a variety of document templates or start fresh.",
     videoSrc:
-      "https://framerusercontent.com/assets/mcPYFO5wHiAutpGrgcyTb2j9WlU.mp4",
+      "http://res.cloudinary.com/dzly4w0dp/video/upload/v1731234010/Proganize/gtfatcuqiee44e5ttter.mp4",
   },
   {
     title: "Enhance with AI",
     description:
       "Customize and enhance your document with AI-powered insights.",
     videoSrc:
-      "https://framerusercontent.com/assets/XTxIKH9hZo86i8qrcNMmw5nil4k.mp4",
+      "http://res.cloudinary.com/dzly4w0dp/video/upload/v1731234026/Proganize/yrctpnxjlmdy9bo3ylip.mp4",
   },
   {
     title: "Publish & Share",
     description: "Collaborate, export, or publish your document effortlessly.",
-    videoSrc: "/path-to-publish-and-share-video.mp4",
+    videoSrc:
+      "http://res.cloudinary.com/dzly4w0dp/video/upload/v1731234092/Proganize/nouopdwksjwuz0nondhu.mp4",
   },
 ];
 
@@ -49,15 +50,26 @@ export default function HowItWorks() {
         playStep(currentStep + 1);
       } else {
         setCurrentStep(0);
+        playStep(0); // Restart from the first step
       }
+    };
+
+    const handleVideoCanPlay = () => {
+      video.play();
+      setIsPlaying(true);
     };
 
     video.addEventListener("timeupdate", updateProgress);
     video.addEventListener("ended", handleVideoEnd);
+    video.addEventListener("canplay", handleVideoCanPlay);
+
+    // Start playing the first step when the component mounts
+    playStep(currentStep);
 
     return () => {
       video.removeEventListener("timeupdate", updateProgress);
       video.removeEventListener("ended", handleVideoEnd);
+      video.removeEventListener("canplay", handleVideoCanPlay);
     };
   }, [currentStep]);
 
@@ -67,8 +79,7 @@ export default function HowItWorks() {
     if (!video) return;
 
     video.src = steps[index].videoSrc;
-    video.play();
-    setIsPlaying(true);
+    video.load(); // Ensure the video is loaded before playing
   };
 
   const togglePlayPause = () => {
@@ -90,7 +101,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <Card
               key={index}
-              className={`p-6 flex mr-20 items-start space-x-4 relative cursor-pointer transition-all duration-300 ease-in-out ${
+              className={`p-6 flex items-start space-x-4 relative cursor-pointer transition-all duration-300 ease-in-out ${
                 currentStep === index ? "ring-8 ring-[#bf8aeb4d]" : ""
               }`}
               onClick={() => playStep(index)}
@@ -141,6 +152,7 @@ export default function HowItWorks() {
             loop
             autoPlay={true}
             playsInline
+            muted
           >
             Your browser does not support the video tag.
           </video>
