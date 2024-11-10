@@ -19,7 +19,6 @@ import Publishing from "../../public/publishing.png";
 import Export from "../../public/export.png";
 import Collaborate from "../../public/collaborate.png";
 import Templates from "../../public/templates.png";
-import SocialScreen from "../../public/socialscreen.png";
 import HowItWorks from "./layout/works";
 import FAQ from "./layout/faq";
 import Script from "next/script";
