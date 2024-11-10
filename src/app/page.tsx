@@ -31,9 +31,15 @@ export default function Component() {
     <>
       <Head>
         <meta property='og:image' content='../../public/socialscreen.png' />
-        <meta property='og:title' content='Your Page Title' />
+        <meta
+          property='og:title'
+          content='Proganize - Streamlined Document Creation & Collaboration for High-Performing Teams'
+        />
         <meta property='og:description' content='Your page description here.' />
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta
+          name='twitter:card'
+          content='Proganize - Streamlined Document Creation & Collaboration for High-Performing Teams'
+        />
         <meta name='twitter:image' content='../../public/socialscreen.png' />
       </Head>
       <Script
