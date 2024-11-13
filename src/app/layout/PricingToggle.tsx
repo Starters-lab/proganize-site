@@ -8,13 +8,23 @@ export default function PricingToggle() {
   const [isYearly, setIsYearly] = useState(false);
 
   const monthlyPrice = 14.99;
-  const yearlyDiscount = 0.2; // 20% discount
+  const yearlyDiscount = 0.5; // 50% discount for yearly plan
+  const monthlyDiscount = 0.2; // 20% discount for monthly plan
 
-  const yearlyPrice = (monthlyPrice * 12 * (1 - yearlyDiscount)).toFixed(2);
+  const discountedMonthlyPrice = (monthlyPrice * (1 - monthlyDiscount)).toFixed(
+    2
+  );
+  const yearlyPrice = (monthlyPrice * 12).toFixed(2);
+  const discountedYearlyPrice = (
+    monthlyPrice *
+    12 *
+    (1 - yearlyDiscount)
+  ).toFixed(2);
 
   const togglePlan = () => {
     setIsYearly(!isYearly);
   };
+
   return (
     <div className='mx-auto max-w-5xl mt-8'>
       <div className='flex justify-center'>
@@ -24,7 +34,7 @@ export default function PricingToggle() {
             !isYearly ? "bg-gray-200" : "bg-white"
           } rounded-l-lg`}
         >
-          Pay monthly
+          Pay monthly{" "}
         </button>
         <button
           onClick={togglePlan}
@@ -32,10 +42,10 @@ export default function PricingToggle() {
             isYearly ? "bg-gray-200" : "bg-white"
           } rounded-r-lg`}
         >
-          Pay yearly <span className='text-[#8f31e3]'>save 20%</span>
+          Pay yearly{" "}
         </button>
       </div>
-      <div className='flex justify-center items-center text-green-500 mb-8 mt-3'>
+      <div className='flex justify-center items-center text-green-700 mb-8 mt-3'>
         <div>
           <GiftIcon />
         </div>
@@ -79,7 +89,7 @@ export default function PricingToggle() {
           </div>
         </Card>
         <Card className='p-8 bg-card/50 backdrop-blur-sm border-[#bf8aeb4d] relative overflow-hidden'>
-          <div className='absolute top-0 right-0 bg-[#8f31e3] text-primary-foreground px-3 py-1 text-sm font-bold'>
+          <div className='absolute rounded-bl-lg top-0 right-0 bg-[#d7c2e74d] text-black px-3 py-1 text-sm font-bold'>
             BEST VALUE
           </div>
           <div className='flex flex-col h-full'>
@@ -89,8 +99,26 @@ export default function PricingToggle() {
             </p>
             <div className='mb-4'>
               <div className='flex items-baseline gap-1'>
-                <span className='text-3xl font-bold'>
-                  {isYearly ? `$${yearlyPrice}` : `$${monthlyPrice}`}
+                <span className='text-3xl '>
+                  {isYearly ? (
+                    <>
+                      <span className='line-through text-gray-500'>
+                        ${yearlyPrice}
+                      </span>{" "}
+                      <span className='font-bold'>
+                        ${discountedYearlyPrice}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className='line-through text-gray-500'>
+                        ${monthlyPrice}
+                      </span>{" "}
+                      <span className='font-bold'>
+                        ${discountedMonthlyPrice}
+                      </span>
+                    </>
+                  )}
                 </span>
                 <span className='text-muted-foreground'>
                   /{isYearly ? "year" : "month"}
@@ -101,7 +129,7 @@ export default function PricingToggle() {
               </p>
               {isYearly && (
                 <p className='text-sm font-semibold text-[#8f31e3]'>
-                  20% off - Limited time offer!
+                  50% off - Limited time offer for the first 50 customers!
                 </p>
               )}
             </div>
