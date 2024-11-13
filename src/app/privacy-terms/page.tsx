@@ -42,10 +42,11 @@ export default function PrivacyAndTermsPage() {
                     <section>
                       <h3 className='text-2xl font-semibold'>Introduction</h3>
                       <p>
-                        Gistabyte Inc. ("we," "us," "our") operates Proganize, a
-                        platform for indie hackers to easily generate Product
-                        Requirement Documents (PRD) and collaborate on them. We
-                        are committed to protecting your privacy. This Privacy
+                        Gistabyte Inc. (&quot;we,&quot; &quot;us,&quot;
+                        &quot;our&quot;) operates Proganize, a platform for
+                        indie hackers to easily generate Product Requirement
+                        Documents (PRD) and collaborate on them. We are
+                        committed to protecting your privacy. This Privacy
                         Policy explains how we collect, use, disclose, and
                         safeguard your information when you use Proganize. By
                         using our services, you consent to the collection and
@@ -189,8 +190,8 @@ export default function PrivacyAndTermsPage() {
                       </h3>
                       <p>
                         By using Proganize, you agree to these Terms of Service
-                        ("Terms") and our Privacy Policy. If you do not agree,
-                        please do not use our platform.
+                        (&quot;Terms&quot;) and our Privacy Policy. If you do
+                        not agree, please do not use our platform.
                       </p>
                     </section>
 
@@ -261,7 +262,7 @@ export default function PrivacyAndTermsPage() {
                       </ul>
                       <p>
                         Payment is processed via Stripe, and all subscriptions
-                        are governed by Stripe's terms of service.
+                        are governed by Stripe&apos;s terms of service.
                       </p>
                     </section>
 
