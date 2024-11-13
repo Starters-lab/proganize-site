@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+
 import {
-  ArrowRight,
-  Check,
   Zap,
   FileText,
   Users,
   Download,
   Globe,
   HeadphonesIcon,
-  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
