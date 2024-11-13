@@ -25,6 +25,7 @@ import Script from "next/script";
 import VideoHome from "./layout/video";
 import Heading from "./layout/nav";
 import Head from "next/head";
+import PricingToggle from "./layout/PricingToggle";
 
 export default function Component() {
   return (
@@ -69,13 +70,27 @@ export default function Component() {
                   </p>
                 </div>
                 <div className='mt-20'>
-                  <Button
-                    className='bg-primary text-primary-foreground'
-                    size='lg'
-                  >
-                    Start with 1,000 Free AI Words
-                  </Button>
+                  <Link href={`${process.env.APP_URL}`}>
+                    <Button
+                      className='bg-primary text-primary-foreground'
+                      size='lg'
+                    >
+                      Start with 1,000 Free AI Words
+                    </Button>
+                  </Link>
                 </div>
+                <a
+                  href='https://www.producthunt.com/posts/proganize?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-proganize'
+                  target='_blank'
+                >
+                  <img
+                    src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=606755&theme=light'
+                    alt='Proganize - Write&#0032;documents&#0032;10X&#0032;faster&#0044;&#0032;organize&#0032;smarter—with&#0032;AI&#0046; | Product Hunt'
+                    style={{ width: "150px", height: "54px" }}
+                    width='250'
+                    height='54'
+                  />
+                </a>
                 <VideoHome />
               </div>
             </div>
@@ -211,121 +226,17 @@ export default function Component() {
                   decide how much to invest based on your goals.
                 </p>
               </div>
-              <div className='mx-auto max-w-5xl mt-8'>
-                <div className='grid gap-8 md:grid-cols-2'>
-                  <Card className='p-8 bg-card/50 backdrop-blur-sm'>
-                    <div className='flex flex-col h-full'>
-                      <h3 className='text-2xl font-bold mb-2'>Pay As You Go</h3>
-                      <p className='text-muted-foreground mb-4'>
-                        Perfect for occasional use or small projects
-                      </p>
-                      <div className='mb-4'>
-                        <div className='flex items-baseline gap-1'>
-                          <span className='text-3xl font-bold'>$0.002</span>
-                          <span className='text-muted-foreground'>
-                            per AI word
-                          </span>
-                        </div>
-                        <p className='text-sm text-muted-foreground'>
-                          No monthly commitment
-                        </p>
-                      </div>
-                      <ul className='space-y-2 mb-6 flex-grow'>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Basic AI document generation</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Access to standard templates</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Export to PDF and DOCX</span>
-                        </li>
-                      </ul>
-                      <Button className='w-full' variant='outline'>
-                        Start for free
-                      </Button>
-                    </div>
-                  </Card>
-                  <Card className='p-8 bg-card/50 backdrop-blur-sm border-[#bf8aeb4d] relative overflow-hidden'>
-                    <div className='absolute top-0 right-0 bg-[#8f31e3] text-primary-foreground px-3 py-1 text-sm font-bold'>
-                      BEST VALUE
-                    </div>
-                    <div className='flex flex-col h-full'>
-                      <h3 className='text-2xl font-bold mb-2'>Pro Plan</h3>
-                      <p className='text-muted-foreground mb-4'>
-                        Full access to all features and AI-powered tools
-                      </p>
-                      <div className='mb-4'>
-                        <div className='flex items-baseline gap-1'>
-                          <span className='text-3xl font-bold'>$14.99</span>
-                          <span className='text-muted-foreground'>/month</span>
-                        </div>
-                        <p className='text-sm text-muted-foreground'>
-                          Includes 10,000 AI words per month
-                        </p>
-                        <p className='text-sm font-semibold text-[#8f31e3]'>
-                          20% off - Limited time offer!
-                        </p>
-                      </div>
-                      <ul className='space-y-2 mb-6 flex-grow'>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Advanced AI document generation</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Unlimited team collaboration</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Premium templates</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Priority support</span>
-                        </li>
-                        <li className='flex items-center'>
-                          <Check className='h-4 w-4 mr-2 text-primary' />
-                          <span>Advanced export options</span>
-                        </li>
-                      </ul>
-                      <Button className='w-full'>
-                        Start with pro
-                        <ArrowRight className='ml-2 h-4 w-4' />
-                      </Button>
-                    </div>
-                  </Card>
-                </div>
-                <div className='flex items-center justify-center gap-4 mt-6'>
-                  <Link
-                    href='#'
-                    className='text-sm text-muted-foreground hover:text-primary flex items-center'
-                  >
-                    View all features
-                    <ArrowRight className='ml-1 h-4 w-4' />
-                  </Link>
-                  <div className='text-muted-foreground'>|</div>
-                  <Link
-                    href='#'
-                    className='text-sm text-muted-foreground hover:text-primary flex items-center'
-                  >
-                    Compare plans
-                    <ExternalLink className='ml-1 h-4 w-4' />
-                  </Link>
-                </div>
-              </div>
+              <PricingToggle />
             </div>
           </section>
-          <section className='w-full py-12 md:py-24 lg:py-32' id='faq'>
+          <section className='w-full  py-12 md:py-24 lg:py-32' id='faq'>
             <div className='px-4 md:px-6'>
               <h2 className='text-3xl font-bold tracking-tighter text-center mb-12'>
                 Frequently Asked Questions
               </h2>
               <FAQ />
             </div>
+            <div className='flex items-start justify-center my-10'></div>
           </section>
         </main>
 
@@ -336,13 +247,13 @@ export default function Component() {
           <nav className='sm:ml-auto flex gap-4 sm:gap-6'>
             <Link
               className='text-xs hover:underline underline-offset-4'
-              href='#'
+              href='/privacy-terms'
             >
               Terms of Service
             </Link>
             <Link
               className='text-xs hover:underline underline-offset-4'
-              href='#'
+              href='/privacy-terms'
             >
               Privacy
             </Link>

@@ -16,47 +16,49 @@ export default function Heading() {
     >
       <div className='flex w-full'>
         <div className='flex items-center justify-between w-full'>
-          <Link className='flex items-center' href='#'>
+          <Link className='flex items-center' href='/#'>
             <Image src={LogoDark} alt='Proganize dark' />
           </Link>
-          <button
-            className='lg:hidden block text-primary'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              className='w-6 h-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
+          <Link href={`${process.env.APP_URL}`}>
+            <button
+              className='lg:hidden block text-primary'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M4 6h16M4 12h16m-7 6h7'
-              />
-            </svg>
-          </button>
+              <svg
+                className='w-6 h-6'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M4 6h16M4 12h16m-7 6h7'
+                />
+              </svg>
+            </button>
+          </Link>
         </div>
         <nav
           className={`hidden w-full lg:flex ml-auto flex-col lg:flex-row gap-4 sm:gap-6 transition-transform duration-300 ease-in-out`}
         >
           <Link
             className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-            href='#howitworks'
+            href='/#howitworks'
           >
             How it Works
           </Link>
           <Link
             className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-            href='#pricing'
+            href='/#pricing'
           >
             Pricing
           </Link>
           <Link
             className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-            href='#faq'
+            href='/#faq'
           >
             FAQ
           </Link>
@@ -77,19 +79,19 @@ export default function Heading() {
       >
         <Link
           className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-          href='#howitworks'
+          href='/#howitworks'
         >
           How it Works
         </Link>
         <Link
           className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-          href='#pricing'
+          href='/#pricing'
         >
           Pricing
         </Link>
         <Link
           className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
-          href='#faq'
+          href='/#faq'
         >
           FAQ
         </Link>
