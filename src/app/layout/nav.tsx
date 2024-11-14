@@ -64,12 +64,14 @@ export default function Heading() {
           </Link>
         </nav>
         <div className='hidden lg:block'>
-          <Button
-            className='bg-primary text-primary-foreground'
-            variant='default'
-          >
-            Go to dashboard
-          </Button>
+          <Link href={`${process.env.APP_URL}`}>
+            <Button
+              className='bg-primary text-primary-foreground'
+              variant='default'
+            >
+              Go to dashboard
+            </Button>
+          </Link>
         </div>
       </div>
       <nav

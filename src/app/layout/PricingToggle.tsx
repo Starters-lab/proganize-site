@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Check, ArrowRight, GiftIcon } from "lucide-react";
+import { Check, ArrowRight, GiftIcon, Link } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -83,9 +83,11 @@ export default function PricingToggle() {
                 <span>Export to PDF and DOCX</span>
               </li>
             </ul>
-            <Button className='w-full' variant='outline'>
-              Start for free
-            </Button>
+            <Link href={`${process.env.APP_URL}`}>
+              <Button className='w-full' variant='outline'>
+                Start for free
+              </Button>
+            </Link>
           </div>
         </Card>
         <Card className='p-8 bg-card/50 backdrop-blur-sm border-[#bf8aeb4d] relative overflow-hidden'>
@@ -155,10 +157,12 @@ export default function PricingToggle() {
                 <span>Advanced export options</span>
               </li>
             </ul>
-            <Button className='w-full'>
-              Start with pro
-              <ArrowRight className='ml-2 h-4 w-4' />
-            </Button>
+            <Link href={`${process.env.APP_URL}`}>
+              <Button className='w-full'>
+                Start with pro
+                <ArrowRight className='ml-2 h-4 w-4' />
+              </Button>
+            </Link>
           </div>
         </Card>
       </div>

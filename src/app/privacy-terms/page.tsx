@@ -36,7 +36,7 @@ export default function PrivacyAndTermsPage() {
                       Privacy Policy for Proganize (by Gistabyte Inc.)
                     </h2>
                     <p className='text-sm text-muted-foreground'>
-                      Effective Date: [Insert Date]
+                      Effective Date: 13th November, 2024
                     </p>
 
                     <section>
@@ -181,7 +181,7 @@ export default function PrivacyAndTermsPage() {
                       Terms of Service for Proganize (by Gistabyte Inc.)
                     </h2>
                     <p className='text-sm text-muted-foreground'>
-                      Effective Date: [Insert Date]
+                      Effective Date: 13th November, 2024
                     </p>
 
                     <section>
