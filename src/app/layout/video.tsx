@@ -3,8 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import { useRef } from "react";
 
-export default function VideoHome() {
+export default function VideoHome({ isPdfPage }: { isPdfPage?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const videoUrl = isPdfPage
+    ? "http://res.cloudinary.com/dzly4w0dp/video/upload/v1735570510/Proganize/k2etq3nzdbrcrmw5ivpd.mov"
+    : "https://res.cloudinary.com/dzly4w0dp/video/upload/v1731234105/Proganize/sn9lncsetqxrrbwzdzsq.mp4";
 
   const handlePlayButtonClick = () => {
     if (videoRef.current) {
@@ -27,8 +31,9 @@ export default function VideoHome() {
       </div>
       <video
         ref={videoRef} // Added ref to the video element
-        src='https://res.cloudinary.com/dzly4w0dp/video/upload/v1731234105/Proganize/sn9lncsetqxrrbwzdzsq.mp4'
+        src={videoUrl}
         loop
+        autoPlay
         playsInline
         preload='auto'
         muted

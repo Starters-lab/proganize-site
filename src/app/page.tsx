@@ -66,29 +66,17 @@ export default function Component() {
                     collaboration easy and efficient.
                   </p>
                 </div>
-                <div className='mt-20'>
+                <div className='mt-20 flex items-center flex-col'>
                   <Link href={`${process.env.APP_URL}`}>
                     <Button
                       className='bg-primary text-primary-foreground'
                       size='lg'
                     >
-                      Start with 1,000 Free AI Words
+                      Try it for free
                     </Button>
                   </Link>
+                  <p className='text-[10px]'>No credit card required</p>
                 </div>
-                <a
-                  href='https://www.producthunt.com/posts/proganize?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-proganize'
-                  target='_blank'
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=606755&theme=light'
-                    alt='Proganize - Write&#0032;documents&#0032;10X&#0032;faster&#0044;&#0032;organize&#0032;smarter—with&#0032;AI&#0046; | Product Hunt'
-                    style={{ width: "150px", height: "54px" }}
-                    width='250'
-                    height='54'
-                  />
-                </a>
                 <VideoHome />
               </div>
             </div>

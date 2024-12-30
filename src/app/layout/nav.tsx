@@ -81,6 +81,13 @@ export default function Heading() {
       >
         <Link
           className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
+          href='/pdf'
+        >
+          Chat with PDF
+        </Link>
+
+        <Link
+          className='text-sm font-medium hover:underline underline-offset-4 transform hover:scale-105 transition-transform duration-200'
           href='/#howitworks'
         >
           How it Works
