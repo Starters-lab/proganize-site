@@ -51,10 +51,12 @@ export default function Home() {
             with PDF, you can unlock key insights, analyze documents, and
             transform the way you study and work—all in one place.
           </p>
-          <Button size='lg' className='text-lg'>
-            Try it for free
-            <ChevronRight className='ml-2' />
-          </Button>
+          <Link href={`${process.env.APP_URL}/pdf`}>
+            <Button size='lg' className='text-lg'>
+              Try it for free
+              <ChevronRight className='ml-2' />
+            </Button>
+          </Link>
         </div>
         <div className='space-y-4 md:mx-40'>
           <VideoHome isPdfPage={true} />
