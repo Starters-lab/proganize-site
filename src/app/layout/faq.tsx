@@ -11,27 +11,43 @@ export default function FAQ() {
   };
 
   return (
-    <div className='max-w-2xl mx-auto space-y-4'>
+    <div className='max-w-4xl mx-auto space-y-4'>
+      <div className='text-center mb-8'>
+        <h1 className='text-3xl font-bold tracking-tighter text-center md:text-5xl my-10'>
+          Frequently Asked Questions
+        </h1>
+        <p className='text-muted-foreground'>
+          For any other questions, please feel free to contact us.
+        </p>
+      </div>
       {[
         {
-          q: "What is an AI word?",
-          a: "AI words are units of text generation using our advanced AI system. Each word generated counts towards your plan's limit.",
+          q: "What is Proganize, and how does it help students?",
+          a: "Proganize is a tool designed to help students organize their study materials and collaborate effectively.",
         },
         {
-          q: "Can I switch between plans?",
-          a: "Yes, you can switch between the Pay As You Go and Pro plans at any time. Unused words from Pay As You Go purchases never expire.",
+          q: "What's the difference between the subscription plan and the pay-as-you-go option?",
+          a: "The subscription plan offers unlimited access, while the pay-as-you-go option allows you to purchase credits as needed.",
         },
         {
-          q: "How does collaboration work?",
-          a: "Pro plan users can invite unlimited collaborators to their documents. Each collaborator can view and edit documents in real-time.",
+          q: "How does the chat with PDFs feature work?",
+          a: "You can upload PDFs and chat with the content to extract information and insights.",
+        },
+        {
+          q: "Can Proganize help me write my research papers or thesis?",
+          a: "Yes, Proganize offers tools to assist in writing and organizing your research papers or thesis.",
+        },
+        {
+          q: "Is Proganize suitable for all levels of students?",
+          a: "Proganize is designed to be useful for students at all levels, from high school to university.",
         },
       ].map((faq, index) => (
-        <Card key={index} className='p-6'>
+        <div key={index} className='p-4'>
           <div
-            className='flex justify-between items-center cursor-pointer'
+            className='flex justify-between items-center cursor-pointer border-b pb-4'
             onClick={() => toggleAccordion(index)}
           >
-            <h3 className='text-xl font-bold mb-2'>{faq.q}</h3>
+            <h3 className='text-lg font-medium'>{faq.q}</h3>
             <ChevronDown
               className={`transition-transform duration-300 ${
                 activeIndex === index ? "rotate-180" : ""
@@ -43,9 +59,9 @@ export default function FAQ() {
               activeIndex === index ? "max-h-40" : "max-h-0"
             }`}
           >
-            <p className='text-muted-foreground'>{faq.a}</p>
+            <p className='text-muted-foreground mt-4'>{faq.a}</p>
           </div>
-        </Card>
+        </div>
       ))}
     </div>
   );

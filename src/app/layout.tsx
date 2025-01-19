@@ -14,10 +14,33 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Proganize - Streamlined Document Creation & Collaboration for High-Performing Teams",
+  title: "Proganize - AI Study Tools for Smarter Learning",
   description:
-    "Proganize helps teams create, organize, and collaborate on documents faster with AI. Flexible pricing with free 1,000 AI words for new users!",
+    "Proganize helps students master their studies with ease. Chat with PDFs, generate quizzes, create flashcards, and simplify learning with our AI-powered tools.",
+  keywords:
+    "AI study tools, flashcards, quizzes, PDF assistant, AI tutor, study smarter, learning platform, exam preparation, student tools",
+  openGraph: {
+    title: "Proganize - AI Study Tools for Smarter Learning",
+    description:
+      "Proganize helps students master their studies with ease. Chat with PDFs, generate quizzes, create flashcards, and simplify learning with our AI-powered tools.",
+    type: "website",
+    url: "https://prorganize.app",
+    images: [
+      {
+        url: "/socialscreen.png", // Ensure this image is in your public folder
+        width: 1200,
+        height: 630,
+        alt: "Proganize Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Proganize - AI Study Tools for Smarter Learning",
+    description:
+      "Proganize helps students master their studies with ease. Chat with PDFs, generate quizzes, create flashcards, and simplify learning with our AI-powered tools.",
+    images: ["/og-image.jpg"], // Same image as OpenGraph
+  },
 };
 
 export default function RootLayout({

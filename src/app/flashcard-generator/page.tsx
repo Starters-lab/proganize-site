@@ -17,32 +17,32 @@ import VideoHome from "../layout/video";
 import Footer from "../layout/footer";
 
 export const metadata = {
-  title: "Chat with PDFs - Your AI Study Companion",
+  title: "Create Flashcards - Your AI Study Assistant",
   description:
-    "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
+    "Upgrade your study routine with Proganize flashcards. Create, organize, and share flashcards easily, or access an extensive library of pre-made decks. Study smarter, not harder.",
   keywords:
-    "PDF assistant, AI study tools, chat with PDFs, study materials, flashcards, quizzes, AI tutor, learning platform, document assistant, study smarter",
+    "flashcards, AI flashcards, create study decks, online flashcards, interactive learning, study tools, quiz generator, Proganize flashcards",
   openGraph: {
-    title: "Chat with PDFs - Your AI Study Companion",
+    title: "Create Flashcards - Your AI Study Assistant",
     description:
-      "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
+      "Upgrade your study routine with Proganize flashcards. Create, organize, and share flashcards easily, or access an extensive library of pre-made decks. Study smarter, not harder.",
     type: "website",
-    url: "https://prorganize.app/pdf",
+    url: "https://prorganize.app/flashcards",
     images: [
       {
-        url: "/socialscreen.png", // Ensure this image is added to your public folder
+        url: "/socialscreen-flashcards.png", // Add this image to your public folder
         width: 1200,
         height: 630,
-        alt: "Chat with PDFs - Your AI Study Companion",
+        alt: "Create Flashcards with Proganize",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chat with PDFs - Your AI Study Companion",
+    title: "Create Flashcards - Your AI Study Assistant",
     description:
-      "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
-    images: ["/og-image.jpg"], // Same image as OpenGraph
+      "Upgrade your study routine with Proganize flashcards. Create, organize, and share flashcards easily, or access an extensive library of pre-made decks. Study smarter, not harder.",
+    images: ["/og-image-flashcards.jpg"], // Same image as OpenGraph
   },
 };
 
@@ -57,14 +57,15 @@ export default function Home() {
           <div className='flex flex-col items-center space-y-4 text-center'>
             <div className='space-y-6 max-w-3xl'>
               <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl'>
-                Chat with Your PDFs and
+                The easiest way to make
                 <br />
-                Study Materials
+                and study flashcards
               </h1>
               <p className='mx-auto text-lg text-muted-foreground md:text-xl'>
-                Upload your PDFs, notes, and bibliographies to get instant
-                summaries, answers to your questions, and AI-generated quizzes,
-                flashcards, and study guides tailored to your needs.
+                A smarter way to study with flashcards is here. Proganize makes
+                it effortless to create tailored flashcards from your study
+                materials, explore shared decks from your peers, or let AI
+                generate flashcards for you—all in one place.
               </p>
             </div>
             <div className='mt-8'>

@@ -17,32 +17,32 @@ import VideoHome from "../layout/video";
 import Footer from "../layout/footer";
 
 export const metadata = {
-  title: "Chat with PDFs - Your AI Study Companion",
+  title: "AI Examiner - Personalized Exam Preparation",
   description:
-    "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
+    "Simulate exams and test your knowledge with Proganize's AI Examiner. Generate tailored questions, receive instant feedback, and prepare smarter for any challenge.",
   keywords:
-    "PDF assistant, AI study tools, chat with PDFs, study materials, flashcards, quizzes, AI tutor, learning platform, document assistant, study smarter",
+    "AI examiner, exam preparation, practice tests, AI-powered tests, exam simulation, custom tests, Proganize AI Examiner",
   openGraph: {
-    title: "Chat with PDFs - Your AI Study Companion",
+    title: "AI Examiner - Personalized Exam Preparation",
     description:
-      "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
+      "Simulate exams and test your knowledge with Proganize's AI Examiner. Generate tailored questions, receive instant feedback, and prepare smarter for any challenge.",
     type: "website",
-    url: "https://prorganize.app/pdf",
+    url: "https://prorganize.app/ai-examiner",
     images: [
       {
-        url: "/socialscreen.png", // Ensure this image is added to your public folder
+        url: "/socialscreen-ai-examiner.png", // Add this image to your public folder
         width: 1200,
         height: 630,
-        alt: "Chat with PDFs - Your AI Study Companion",
+        alt: "AI Examiner by Proganize",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chat with PDFs - Your AI Study Companion",
+    title: "AI Examiner - Personalized Exam Preparation",
     description:
-      "Transform your study process with Proganize. Upload PDFs, get instant summaries, ask questions, and create quizzes, flashcards, and study aids with AI.",
-    images: ["/og-image.jpg"], // Same image as OpenGraph
+      "Simulate exams and test your knowledge with Proganize's AI Examiner. Generate tailored questions, receive instant feedback, and prepare smarter for any challenge.",
+    images: ["/og-image-ai-examiner.jpg"], // Same image as OpenGraph
   },
 };
 
@@ -57,14 +57,12 @@ export default function Home() {
           <div className='flex flex-col items-center space-y-4 text-center'>
             <div className='space-y-6 max-w-3xl'>
               <h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl'>
-                Chat with Your PDFs and
-                <br />
-                Study Materials
+                AI Examiner for <br /> Smarter Studying
               </h1>
               <p className='mx-auto text-lg text-muted-foreground md:text-xl'>
-                Upload your PDFs, notes, and bibliographies to get instant
-                summaries, answers to your questions, and AI-generated quizzes,
-                flashcards, and study guides tailored to your needs.
+                Simulate exams, test your knowledge, and receive AI-generated
+                practical questions tailored to your course topics or study
+                materials.
               </p>
             </div>
             <div className='mt-8'>
