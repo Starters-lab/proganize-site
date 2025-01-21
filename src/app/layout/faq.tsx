@@ -1,5 +1,4 @@
 "use client";
-import { Card } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 

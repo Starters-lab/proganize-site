@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import LogoDark from "../../public/proganize-dark-side.svg";
 import {
   Globe,
   Inbox,

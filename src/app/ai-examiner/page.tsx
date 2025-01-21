@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Brain, Globe, WalletCards, Book } from "lucide-react";
 import Heading from "../layout/nav";
 import Link from "next/link";
@@ -10,7 +9,6 @@ import Cambridge from "../../../public/Cambirdge.avif";
 import Penn from "../../../public/Penn.avif";
 import Standford from "../../../public/Stanford.avif";
 import FAQ from "../layout/faq";
-import Head from "next/head";
 import PricingToggle from "../layout/PricingToggle";
 import Testimonials from "../layout/testimonials";
 import VideoHome from "../layout/video";

@@ -1,13 +1,7 @@
-"use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import Heading from "../layout/nav";
 import Footer from "../layout/footer";
 
 export default function PrivacyAndTermsPage() {
-  const [activeTab, setActiveTab] = useState("privacy");
-
   return (
     <>
       <Heading />

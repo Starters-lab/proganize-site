@@ -5,6 +5,7 @@ import Link from "next/link";
 import Heading from "../layout/nav";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import Footer from "../layout/footer";
+import Image from "next/image";
 
 interface Post {
   title: string;
@@ -36,7 +37,7 @@ export default function Blog() {
         {posts.length > 0 && (
           <div className='featured-post mb-8 flex gap-4 bg-[#1c1c1c] p-6 md:h-[400px] lg:h-[500px] md:flex-nowrap lg:flex-nowrap flex-wrap'>
             <div className='w-full'>
-              <img
+              <Image
                 src={posts[0].image}
                 alt={posts[0].title}
                 className='w-full h-full object-cover'
@@ -50,7 +51,7 @@ export default function Blog() {
               <p className='text-gray-400 mt-4'>{posts[0].description}</p>
               <div className='flex gap-10'>
                 <div className='flex items-center mt-4'>
-                  <img
+                  <Image
                     src='https://doodleipsum.com/700/avatar-2?i=ff2c7457dcaa9fefe2942055c7ee9739'
                     alt='Author'
                     className='w-10 h-10 rounded-full mr-3'
@@ -89,7 +90,7 @@ export default function Blog() {
             {posts.slice(1).map((post) => (
               <div key={post.slug} className='flex items-start space-x-6'>
                 <div className='w-1/4'>
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
                     className='rounded-lg object-cover'

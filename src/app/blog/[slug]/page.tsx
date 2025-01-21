@@ -2,21 +2,22 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import Image from "next/image";
 
 interface BlogPostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: BlogPostProps) {
-  const { data } = getPost(params.slug);
+  const { data } = getPost((await params).slug);
   return {
     title: `${data.title} | Proganize Blog`,
     description: data.description,
   };
 }
 
-export default function BlogPost({ params }: BlogPostProps) {
-  const { slug } = params;
+export default async function BlogPost({ params }: BlogPostProps) {
+  const { slug } = await params;
 
   const { content, data } = getPost(slug);
 
@@ -26,7 +27,7 @@ export default function BlogPost({ params }: BlogPostProps) {
       <p className='text-gray-600 mb-4'>
         By {data.author} on {data.date}
       </p>
-      <img src={data.image} alt={data.title} className='rounded-lg mb-6' />
+      <Image src={data.image} alt={data.title} className='rounded-lg mb-6' />
       <ReactMarkdown className='prose'>{content}</ReactMarkdown>
     </div>
   );
